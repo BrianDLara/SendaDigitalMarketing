@@ -7,6 +7,9 @@ import {
   ScrollRestoration,
 } from "react-router";
 
+//Components Imports
+import Nav from "~/Components/Nav"
+
 import type { Route } from "./+types/root";
 import "./app.css";
 
@@ -28,7 +31,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
     <html lang="en">
       <head>
         <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <Meta />
         <Links />
       </head>
@@ -42,7 +45,17 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 export default function App() {
-  return <Outlet />;
+  return ( 
+    <div className='h-dvh bg-white'>
+      <header className='py-4 mb-4'>
+        <Nav/>
+      </header>
+      <main className='mt-4'>
+        <Outlet />
+      </main>
+    </div>
+  
+  )
 }
 
 export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
