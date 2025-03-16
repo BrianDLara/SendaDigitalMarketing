@@ -1,5 +1,4 @@
 import React from 'react'
-import { FaBars, FaTimes } from "react-icons/fa";
 
 const Mission = () => {
   return (
@@ -98,10 +97,10 @@ const Mission = () => {
                             <div className="h-[46px] w-[3px] bg-gray-800 absolute -start-[17px] top-[178px] rounded-s-lg"></div>
                             <div className="h-[64px] w-[3px] bg-gray-800 absolute -end-[17px] top-[142px] rounded-e-lg"></div>
                             <div className="rounded-[2rem] overflow-hidden w-[272px] h-[572px] bg-white dark:bg-gray-800">
-                            <video className="hidden dark:block w-full h-full rounded-[2rem] object-cover" autoPlay loop muted playsInline>
-    <source src="/videos/video1.mp4" type="video/mp4" />
-    Tu navegador no soporta el video.
-</video>
+                            <video className=" w-full h-full rounded-[2rem] object-cover" autoPlay loop muted playsInline>
+                                <source src="/videos/video1.mp4" type="video/mp4" />
+                                    Tu navegador no soporta el video.
+                            </video>
                             </div>
                         </div>
 
