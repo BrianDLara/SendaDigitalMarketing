@@ -10,7 +10,7 @@ const AboutUs = () => {
   };
 
   return (
-    <div className="pt-16">
+    <div className="pt-16 pb-20">
       <h1 className='text-3xl text-center md:text-4xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-teal-400 bg-clip-text text-transparent'>Conocenos</h1>
       <div className="h-1 w-20 bg-gradient-to-r from-blue-400 to-teal-400 mx-auto mb-6 rounded-full"></div>
       <div className="w-full sm:w-4/5 lg:w-3/5 max-w-6xl bg-white border border-gray-300 rounded-lg shadow-md mt-10 pb-4 mb-10 mx-auto">

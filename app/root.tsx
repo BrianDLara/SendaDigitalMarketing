@@ -9,6 +9,7 @@ import {
 
 //Components Imports
 import Nav from "~/Components/Nav"
+import Footer from "~/Components/Footer"
 
 import type { Route } from "./+types/root";
 import "./app.css";
@@ -53,6 +54,9 @@ export default function App() {
       <main className='mt-4'>
         <Outlet />
       </main>
+      <footer>
+        <Footer />
+      </footer>
     </div>
   
   )
