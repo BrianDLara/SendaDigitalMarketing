@@ -85,8 +85,8 @@ const Demo = () => {
                             <li className="flex items-center"><IoIosCheckmarkCircle size="1.5rem" className="text-green-700 mr-2"/> <strong>CRM inteligente&nbsp;</strong> para gestionar tu negocio en un solo lugar</li>
                         </ul>
                         <p className="mt-6 text-lg font-bold text-gray-600">Empieza hoy y llena tu calendario de citas</p>
-                        <button className="mt-6 bg-[#FBB02E] hover:bg-[#e09a2a] text-white font-bold py-3 px-6 rounded-lg text-lg transition-all duration-300">
-                            📅 Reserva una Demo Gratis
+                        <button className="cursor-pointer mt-6 bg-[#FBB02E] hover:bg-[#e09a2a] text-white font-bold py-3 px-6 rounded-lg text-lg transition-all duration-300">
+                            Reserva una Demo Gratis
                         </button>
                     </div>
 
