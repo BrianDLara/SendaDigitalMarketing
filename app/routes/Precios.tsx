@@ -55,7 +55,7 @@ const pricingPlans = [
   },
 ];
 
-const Pricios = () => {
+const Precios = () => {
   return (
     <div>
       <h1 className="text-3xl text-center md:text-4xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-teal-400 bg-clip-text text-transparent">Precios</h1>
@@ -69,7 +69,7 @@ const Pricios = () => {
   );
 };
 
-export default Pricios;
+export default Precios;
 
 
 
