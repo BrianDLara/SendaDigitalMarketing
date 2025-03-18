@@ -14,7 +14,7 @@ const ContactCard = () => {
   const sendToGHLAPI = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    const form = e.target as HTMLFormElement; // Ensure form is correctly typed
+    const form = e.target as HTMLFormElement; 
 
     const formData = {
       email: form.email.value,
@@ -34,10 +34,10 @@ const ContactCard = () => {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer ${GHL_API_KEY}`, // Using env variable
+          Authorization: `Bearer ${GHL_API_KEY}`, 
         },
         body: JSON.stringify({
-          locationId: LOCATION_ID, // Using env variable
+          locationId: LOCATION_ID, 
           contact: {
             email: formData.email,
             firstName: formData.firstName,
