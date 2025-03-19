@@ -51,7 +51,7 @@ export default function App() {
       <header className='py-4 mb-4'>
         <Nav/>
       </header>
-      <main className='mt-4'>
+      <main className='bg-white mt-4'>
         <Outlet />
       </main>
       <footer>

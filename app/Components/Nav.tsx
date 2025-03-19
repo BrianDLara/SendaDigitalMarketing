@@ -1,21 +1,36 @@
 import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
-import { Link, useNavigate } from "react-router"; 
+import { useNavigate, useLocation } from "react-router";
 
 const Nav: React.FC = () => {
     const [open, setOpen] = useState(false);
-    const navigate = useNavigate(); // React Router navigation
+    const navigate = useNavigate();
+    const location = useLocation();
 
-    // Function to handle smooth scrolling
+    // Function to handle smooth scrolling (works from any page)
     const scrollToSection = (id: string) => {
-        navigate(`/#${id}`); // Update URL with section ID
-        setTimeout(() => {
-            const section = document.getElementById(id);
-            if (section) {
-                section.scrollIntoView({ behavior: "smooth" });
-            }
-        }, 100); // Timeout ensures React Router updates first
+        if (location.pathname !== "/") {
+            navigate("/"); // Redirect to the homepage before scrolling
+            setTimeout(() => {
+                scrollToElement(id);
+            }, 500); // Give time for navigation
+        } else {
+            scrollToElement(id);
+        }
         setOpen(false);
+    };
+
+    // Smooth scroll to section
+    const scrollToElement = (id: string) => {
+        const section = document.getElementById(id);
+        if (section) {
+            section.scrollIntoView({ behavior: "smooth" });
+        }
+    };
+
+    // Redirect to GoHighLevel Form
+    const redirectToForm = () => {
+        window.location.href = "https://api.leadconnectorhq.com/widget/form/3OwmhQaqezp2bcbzkxBg";
     };
 
     return (
@@ -48,13 +63,16 @@ const Nav: React.FC = () => {
                                 PRECIOS
                             </button>
                             <button onClick={() => scrollToSection("conocenos")} className="cursor-pointer font-1-semibold text-lg text-custom-red hover:text-custom-blue transition-colors duration-700 underline-effect">
-                                CONOCENOS
+                                CONÓCENOS
                             </button>
-                            <Link to="/about-us">
-                                <button type="button" className="cursor-pointer text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
-                                    CONSULTA GRATIS
-                                </button>
-                            </Link>
+                            
+                            {/* Redirect to GoHighLevel Form */}
+                            <button 
+                                onClick={redirectToForm} 
+                                type="button" 
+                                className="cursor-pointer text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
+                                CONSULTA GRATIS
+                            </button>
                         </div>
                     </div>
                 </div>

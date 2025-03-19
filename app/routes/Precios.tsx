@@ -3,54 +3,58 @@ import PriceCard from '~/Components/PriceCard';
 
 const pricingPlans = [
   {
-    title: "Plan Basico",
-    price: 99,
+    title: "Plan Básico",
+    price: "99",
+    cta: "Empieza ahora con el Plan Básico",
     features: [
-      { name: "Accesso al CRM de Senda", included: true },
-      { name: "Automatisaziones de chatbot", included: true },
-      { name: "Instalacion inicial", included: true },
-      { name: "1 video de Publicidad (Meta Ads)", included: true },
-      { name: "Accesso a App Mobil", included: true },
-      { name: "Gestion de reputacion", included: false },
-      { name: "Chatbot con integracion IA con ChatGPT", included: false },
-      { name: "Agenda de citas automaticas", included: false },
-      { name: "Tutoriales basicos para Meta Ads", included: false },
+      { name: "Acceso al CRM de Senda", included: true },
+      { name: "Automatización de chatbot", included: true },
+      { name: "Instalación inicial", included: true },
+      { name: "1 video de publicidad (Meta Ads)", included: true },
+      { name: "Acceso a la App Móvil", included: true },
+      { name: "Soporte: Hasta 3 consultas al mes", included: true },
+      { name: "Gestión de reputación", included: false },
+      { name: "Chatbot con integración de IA con ChatGPT", included: false },
+      { name: "Agenda de citas automática", included: false },
+      { name: "Tutoriales básicos para Meta Ads", included: false },
       { name: "Publicaciones en Meta Ads", included: false },
-      { name: "Soporte illimitado", included: false },
+
     ],
   },
   {
     title: "Plan Pro",
-    price: 149,
+    price: "149",
+    cta: "Escala tu negocio con el Plan Pro",
     features: [
-      { name: "Accesso al CRM de Senda", included: true },
-      { name: "Automatisaziones de chatbot", included: true },
-      { name: "Instalacion inicial", included: true },
-      { name: "1 video de Publicidad (Meta Ads)", included: true },
-      { name: "Accesso a App Mobil", included: true },
-      { name: "Gestion de reputacion", included: true },
-      { name: "Chatbot con integracion IA con ChatGPT", included: true },
-      { name: "Agenda de citas automaticas", included: true },
-      { name: "Tutoriales basicos para Meta Ads", included: true },
+      { name: "Acceso al CRM de Senda", included: true },
+      { name: "Automatización de chatbot", included: true },
+      { name: "Instalación inicial", included: true },
+      { name: "1 video de publicidad (Meta Ads)", included: true },
+      { name: "Acceso a la App Móvil", included: true },
+      { name: "Soporte: Hasta 5 consultas al mes", included: true },
+      { name: "Gestión de reputación", included: true },
+      { name: "Chatbot con integración de IA con ChatGPT", included: true },
+      { name: "Agenda de citas automática", included: true },
+      { name: "Tutoriales básicos para Meta Ads", included: true },
       { name: "Publicaciones en Meta Ads", included: false },
-      { name: "Soporte illimitado", included: false },
     ],
   },
   {
-    title: "Plan VIP",
-    price: 299,
+    title: "Plan Premium",
+    price: "299",
+    cta: "Domina el marketing con el Plan Elite",
     features: [
-      { name: "Accesso al CRM de Senda", included: true },
-      { name: "Automatisaziones de chatbot", included: true },
-      { name: "Instalacion inicial", included: true },
-      { name: "1 video de Publicidad (Meta Ads)", included: true },
-      { name: "Accesso a App Mobil", included: true },
-      { name: "Gestion de reputacion", included: true },
-      { name: "Chatbot con integracion IA con ChatGPT", included: true },
-      { name: "Agenda de citas automaticas", included: true },
-      { name: "Tutoriales basicos para Meta Ads", included: true },
+      { name: "Acceso al CRM de Senda", included: true },
+      { name: "Automatización de chatbot", included: true },
+      { name: "Instalación inicial", included: true },
+      { name: "1 video de publicidad (Meta Ads)", included: true },
+      { name: "Acceso a la App Móvil", included: true },
+      { name: "Soporte: Ilimitado", included: true },
+      { name: "Gestión de reputación", included: true },
+      { name: "Chatbot con integración de IA con ChatGPT", included: true },
+      { name: "Agenda de citas automática", included: true },
+      { name: "Tutoriales básicos para Meta Ads", included: true },
       { name: "Publicaciones en Meta Ads", included: true },
-      { name: "Soporte illimitado", included: true},
     ],
   },
 ];
@@ -62,7 +66,7 @@ const Precios = () => {
       <div className="h-1 w-20 bg-gradient-to-r from-blue-400 to-teal-400 mx-auto mb-6 rounded-full"></div>
       <div className="flex flex-wrap justify-center gap-8 py-10">
         {pricingPlans.map((plan, index) => (
-          <PriceCard key={index} title={plan.title} price={plan.price} features={plan.features} />
+          <PriceCard key={index} title={plan.title} price={plan.price} cta={plan.cta} features={plan.features} />
         ))}
       </div>
     </div>
@@ -70,6 +74,3 @@ const Precios = () => {
 };
 
 export default Precios;
-
-
-
